@@ -4,7 +4,7 @@ Integration instructions for embedding the Savvy insurance ad unit on CNBC prope
 
 ## Overview
 
-The ad is a self-contained, responsive unit served from Savvy's CDN. It shows a short insurance value proposition with a ZIP-code entry; on click it opens the CNBC-branded Savvy quote experience in a new tab. **No JavaScript, libraries, or build steps are required on your side** — just a single `<iframe>`.
+The ad is a self-contained, responsive unit served from Savvy's CDN. It shows a short insurance value proposition with a ZIP-code entry; on click it opens the CNBC-branded Savvy quote experience in a new tab.
 
 ## Embed
 
@@ -22,8 +22,6 @@ That's the entire integration.
 - **Fluid width**, up to 700px — the iframe fills whatever container holds it.
 - **Fixed height** of 460px — sized to fit both layouts cleanly.
 - **Responsive layout** — the ad automatically switches between a side-by-side banner (iframe ≥ 640px wide) and a stacked card (< 640px), based on the iframe's own width. It works in any slot: article column, sidebar, or mobile.
-
-> **Important:** the `src` must include the explicit `/index.html`. The bare directory path (`https://cdn.savvy.insure/cnbc/v1.0/`) returns an access-denied error.
 
 ## Live preview
 
