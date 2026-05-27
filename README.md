@@ -34,12 +34,6 @@ The ad accepts an optional `txn` query parameter, which it forwards to the desti
 ></iframe>
 ```
 
-## Requirements
-
-- A standard `<iframe>`. Nothing else.
-- No scripts or external libraries on the host page.
-- No cookies are set on the parent page.
-
 ## Support
 
 For questions or changes, reach out to your Savvy contact.
