@@ -17,12 +17,6 @@ Paste this wherever the ad should appear:
 ></iframe>
 ```
 
-That's the entire integration.
-
-- **Fluid width**, up to 700px — the iframe fills whatever container holds it.
-- **Fixed height** of 460px — sized to fit both layouts cleanly.
-- **Responsive layout** — the ad automatically switches between a side-by-side banner (iframe ≥ 640px wide) and a stacked card (< 640px), based on the iframe's own width. It works in any slot: article column, sidebar, or mobile.
-
 ## Live preview
 
 A rendered reference showing the embed is available at:
