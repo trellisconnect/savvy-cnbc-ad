@@ -1,0 +1,53 @@
+# Savvy × CNBC — Ad Embed Guide
+
+Integration instructions for embedding the Savvy insurance ad unit on CNBC properties.
+
+## Overview
+
+The ad is a self-contained, responsive unit served from Savvy's CDN. It shows a short insurance value proposition with a ZIP-code entry; on click it opens the CNBC-branded Savvy quote experience in a new tab. **No JavaScript, libraries, or build steps are required on your side** — just a single `<iframe>`.
+
+## Embed
+
+Paste this wherever the ad should appear:
+
+```html
+<iframe
+  src="https://cdn.savvy.insure/cnbc/v1.0/index.html"
+  style="width:100%;max-width:700px;height:460px;border:0;display:block"
+></iframe>
+```
+
+That's the entire integration.
+
+- **Fluid width**, up to 700px — the iframe fills whatever container holds it.
+- **Fixed height** of 460px — sized to fit both layouts cleanly.
+- **Responsive layout** — the ad automatically switches between a side-by-side banner (iframe ≥ 640px wide) and a stacked card (< 640px), based on the iframe's own width. It works in any slot: article column, sidebar, or mobile.
+
+> **Important:** the `src` must include the explicit `/index.html`. The bare directory path (`https://cdn.savvy.insure/cnbc/v1.0/`) returns an access-denied error.
+
+## Live preview
+
+A rendered reference showing the embed is available at:
+
+**https://cdn.savvy.insure/cnbc/v1.0/iframe-test.html**
+
+## Tracking continuity (optional)
+
+The ad accepts an optional `txn` query parameter, which it forwards to the destination on click. If you pass a transaction or session identifier, append it to the iframe `src`:
+
+```html
+<iframe
+  src="https://cdn.savvy.insure/cnbc/v1.0/index.html?txn=YOUR_ID"
+  ...
+></iframe>
+```
+
+## Requirements
+
+- A standard `<iframe>`. Nothing else.
+- No scripts or external libraries on the host page.
+- No cookies are set on the parent page.
+
+## Support
+
+For questions or changes, reach out to your Savvy contact.
