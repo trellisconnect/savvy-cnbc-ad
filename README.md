@@ -25,11 +25,16 @@ A rendered reference showing the embed is available at:
 
 ## Tracking continuity (optional)
 
-The ad accepts an optional `txn` query parameter, which it forwards to the destination on click. If you pass a transaction or session identifier, append it to the iframe `src`:
+The ad forwards two kinds of query parameters from the iframe `src` to the destination on click:
+
+- **`txn`** — a transaction or session identifier of your choosing.
+- **Any `utm_*` parameter** — e.g. `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, for campaign sub-segmentation. (`utm_source` is fixed to `cnbc` and can't be overridden.)
+
+Append whichever you need to the iframe `src`:
 
 ```html
 <iframe
-  src="https://cdn.savvy.insure/cnbc/v1.0/index.html?txn=YOUR_ID"
+  src="https://cdn.savvy.insure/cnbc/v1.0/index.html?txn=YOUR_ID&utm_campaign=YOUR_CAMPAIGN"
   ...
 ></iframe>
 ```
